@@ -8,6 +8,8 @@ class CreateBarns < ActiveRecord::Migration[5.2]
       t.integer :monthly_fee
       t.integer :stalls
       t.boolean :vacancy
+
+      t.timestamps
     end
   end
 end
