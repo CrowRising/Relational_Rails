@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_21_034417) do
+ActiveRecord::Schema.define(version: 2023_03_21_234856) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,11 +34,11 @@ ActiveRecord::Schema.define(version: 2023_03_21_034417) do
     t.boolean "trail_user"
     t.boolean "arena_user"
     t.boolean "paid"
-    t.bigint "barns_id"
+    t.bigint "barn_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["barns_id"], name: "index_horses_on_barns_id"
+    t.index ["barn_id"], name: "index_horses_on_barn_id"
   end
 
-  add_foreign_key "horses", "barns", column: "barns_id"
+  add_foreign_key "horses", "barns"
 end

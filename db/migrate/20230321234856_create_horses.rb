@@ -7,7 +7,7 @@ class CreateHorses < ActiveRecord::Migration[5.2]
       t.boolean :trail_user
       t.boolean :arena_user
       t.boolean :paid
-      t.references :barns, foreign_key: true
+      t.references :barn, foreign_key: true
 
       t.timestamps
     end
