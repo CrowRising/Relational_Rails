@@ -1,11 +1,12 @@
-<h2>Horses Index Page</h2>
+<h2>All the Horses at the Barn</h2>
+
 <br>
 <% @horses.each do |horse| %>
-  <h4><p>Name: <%= horse.name %></p></h4>
+<h4><p>Name: <%= horse.name %></p></h4>
   <p>Breed: <%= horse.breed %></p>
   <p>Age: <%= horse.age %></p>
   <p>Trail_user: <%= horse.trail_user %></p>
   <p>Arena_user: <%= horse.arena_user %></p>
   <p>Paid: <%= horse.paid %></p>
+  <%end%>
 <br>
-  <% end %>
