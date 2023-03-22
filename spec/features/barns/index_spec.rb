@@ -10,7 +10,7 @@ RSpec.describe '/barns', type: :feature do
     let!(:barn_3) { Barn.create!(name: 'Goosedowns', location: 'Airport Road', arena: true, trail_access: false, monthly_fee: 900, stalls: 40, vacancy: true)}
     it 'displays all the names of all the barns' do
       visit '/barns'
-
+# save_and_open_page
       expect(page).to have_content(barn_1.name)
       expect(page).to have_content(barn_2.name)
       expect(page).to have_content(barn_3.name)
