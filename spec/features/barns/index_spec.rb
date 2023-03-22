@@ -1,8 +1,5 @@
 require 'rails_helper'
 # User Story 1 -Barn Index
-# As a visitor
-# When I visit '/barns'
-# Then I see the name of all barn records in db
 RSpec.describe '/barns', type: :feature do
   describe 'as a visitor I visit the barns index page' do
     let!(:barn_1) { Barn.create!(name: 'Nix', location: 'Nix Lane', arena: true, trail_access: true, monthly_fee: 360, stalls: 24, vacancy: true) }

@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+# User Story 3 -Horse Index
 RSpec.describe '/horses', type: :feature do
   describe ' as a visitor when I visit horse index page' do
     let!(:barn_1) { Barn.create!(name: 'Nix', location: 'Nix Lane', arena: true, trail_access: true, monthly_fee: 360, stalls: 24, vacancy: true) }
@@ -11,7 +11,7 @@ RSpec.describe '/horses', type: :feature do
     
     it 'displays attributes of all horses' do
       visit '/horses'
-save_and_open_page
+
       expect(page).to have_content("Name: #{ horse_1.name }")
       expect(page).to have_content("Breed: #{ horse_1.breed }")
       expect(page).to have_content("Age: #{ horse_1.age }")
