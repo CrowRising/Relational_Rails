@@ -9,6 +9,7 @@ RSpec.describe '/barns/:id', type: :feature do
     
     it 'displays barn_1 and attributes' do
       visit "/barns/#{barn_1.id}"
+      # save_and_open_page
      
       expect(page).to have_content(barn_1.location)
       expect(page).to have_content(barn_1.name)

@@ -1,5 +1,6 @@
 <h2>Barns Index Page</h2>
 
 <% @barns.each do |barn| %>
- <p><%= barn.name %></p>
+<h3> <p><%= barn.name %></p></h3>
+<p><%= barn.created_at %></p>
  <% end %>

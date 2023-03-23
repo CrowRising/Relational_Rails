@@ -1,6 +1,6 @@
 class BarnsController < ApplicationController
   def index
-    @barns = Barn.all
+    @barns = Barn.order_by_creation_date
   end
 
   def show
