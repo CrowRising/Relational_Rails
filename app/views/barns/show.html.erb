@@ -9,3 +9,5 @@
 <p>vacancy: <%=@barn.vacancy%></p>
 
 <p>Number of Horses: <%=@barn.count_of_horses%></p>
+
+<%= link_to "Horse at this Barn", "/barns/#{@barn.id}/horses" %>
