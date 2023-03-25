@@ -6,4 +6,8 @@ class BarnsController < ApplicationController
   def show
     @barn = Barn.find(params[:id])
   end
+
+  def new
+  end
+
 end
