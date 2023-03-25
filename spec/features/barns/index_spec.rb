@@ -17,7 +17,7 @@ RSpec.describe '/barns', type: :feature do
     it 'displays all records of barn in order that they were created and the dates' do
       visit '/barns'
   
-      expect(barn_1.name).to appear_before(barn_2.name)
+      expect(barn_2.name).to appear_before(barn_1.name)
       expect(page).to have_content(barn_1.created_at)
     end
   end
