@@ -16,7 +16,7 @@ RSpec.describe '/barns', type: :feature do
  # User Story 6 -Barn Index sorted
     it 'displays all records of barn in order that they were created and the dates' do
       visit '/barns'
-    
+  
       expect(barn_1.name).to appear_before(barn_2.name)
       expect(page).to have_content(barn_1.created_at)
     end
