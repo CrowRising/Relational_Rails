@@ -4,6 +4,8 @@ This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
+<h1> Relational Rails <h1>
+
 
 * Ruby version
 
