@@ -15,9 +15,11 @@ class BarnsController < ApplicationController
     redirect_to '/barns'
   end
 
+  def edit
+  end
+
   private 
   def barn_params
     params.permit(:name)
   end
-
 end

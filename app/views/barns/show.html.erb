@@ -1,5 +1,9 @@
 <h2>Barn</h2> 
 
+
+ <%= link_to 'Update Barn', "barns/#{@barn.id}"%>
+ 
+
 <p>location: <%=@barn.location%></p>
 <p>name: <%=@barn.name%></p>
 <p>trail access: <%=@barn.trail_access%></p>
@@ -10,4 +14,4 @@
 
 <p>Number of Horses: <%=@barn.count_of_horses%></p>
 
-<h4><%= link_to "Horse at this Barn", "/barns/#{@barn.id}/horses" %></h4>
+<h4><%= link_to "Horses at this Barn", "/barns/#{@barn.id}/horses" %></h4>

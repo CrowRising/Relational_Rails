@@ -28,8 +28,9 @@ RSpec.describe '/barns/new' do
       expect(current_path).to eq('/barns/new')
 
       fill_in 'name', with: 'Eldorado Community Stables'
-      click_on 'Create Barn'
-      expect(current_path).to eq('/barns')
+      click_button 'Create Barn'
+
+      expect(current_path).to eq("/barns")
       expect(page).to have_content('Eldorado Community Stables')
     end
   end

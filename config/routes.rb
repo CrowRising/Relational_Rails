@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get '/horses/:id', to: 'horses#show'
   get '/barns/:barn_id/horses', to: 'barns/horses#index'
   post '/barns', to: 'barns#create'
+  get '/barns/:barn_id/edit', to: 'barns#edit'
+
 end

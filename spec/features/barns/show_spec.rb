@@ -48,4 +48,5 @@ RSpec.describe '/barns/:id', type: :feature do
 
     end
   end
+ 
 end
