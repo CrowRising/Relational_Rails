@@ -11,8 +11,13 @@ class BarnsController < ApplicationController
   end
 
   def create
-    Barn.create(name: params[:name])
+    Barn.create(barn_params)
     redirect_to '/barns'
+  end
+
+  private 
+  def barn_params
+    params.permit(:name)
   end
 
 end

@@ -2,7 +2,10 @@
 
 <% @barns.each do |barn| %>
 <h3> <p><%= barn.name %></p></h3>
-<p><small> created:<%= barn.created_at %></p>
+<p> created:<%= barn.created_at %></p>
  <% end %>
 
- <%= link_to "New Barn", '/barns/new' %>
+ <%= link_to "New Barns", '/barns/new' %>
+ <% @barns.each do |barn| %>
+  <h3><%= barn.name %></h2>
+  <% end %>

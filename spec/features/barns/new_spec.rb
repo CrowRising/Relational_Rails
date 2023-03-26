@@ -24,7 +24,7 @@ RSpec.describe '/barns/new' do
     it 'links to new page from barn index' do
       visit '/barns'
 
-      click_link "New Barn"
+      click_link "New Barns"
       expect(current_path).to eq('/barns/new')
 
       fill_in 'name', with: 'Eldorado Community Stables'
