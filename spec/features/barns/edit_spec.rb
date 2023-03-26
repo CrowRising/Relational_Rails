@@ -21,11 +21,16 @@ RSpec.describe '/barns/:id/edit' do
     let!(:horse_2) { barn_1.horses.create!(name: 'Lefty', breed: 'Appedix Quarter Horse', age: 9, trail_user: true, arena_user: true, paid: true)}
 
     it 'links to an edit page and I can edit barns attributes' do
-      visit "barns/#{barn_2.id}"
+      visit "/barns/#{barn_3.id}"
 
-      click_on "Update Barn #{barn_2.id}"
-      expect(current_path).to eq("/barns/#{barn_2.id}")
+      click_link "Update Barn"
+      expect(current_path).to eq("/barns/#{barn_3.id}/edit")
 
+      fill_in 'vacancy', with: false
+      click_button 'Update Barn'
+
+      expect(current_path).to eq( "/barns/#{barn_3.id}")
+      expect(page).to have_content(barn_3.vacancy)
     end
   end
 end
