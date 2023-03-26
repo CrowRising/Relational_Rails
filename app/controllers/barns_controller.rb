@@ -10,4 +10,9 @@ class BarnsController < ApplicationController
   def new
   end
 
+  def create
+    Barn.create(name: params[:name])
+    redirect_to '/barns'
+  end
+
 end
