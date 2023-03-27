@@ -12,14 +12,14 @@ class HorsesController < ApplicationController
   end
 
   def update
-    horse = Horse.find(params[:id])
-    horse.update(horse_params)
-    horse.save 
+    @horse = Horse.find(params[:id])
+    @horse.update(horse_params)
+    @horse.save 
     redirect_to "/horses/#{@horse.id}"
   end
 
   private 
   def horse_params
-    params.permit(:name)
+    params.permit(:name, :breed, :age, :trail_user, :arena_user, :paid)
   end
 end
