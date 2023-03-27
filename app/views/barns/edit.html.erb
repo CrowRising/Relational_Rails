@@ -1,0 +1,22 @@
+<h2>Edit Barn</h2>
+
+<%= form_with url: "/barns/#{@barn.id}", method: :patch, local: true do |form| %>
+ <p><%= form.label :location %></p>
+  <p><%= form.text_field :location %></p>
+ <p><%= form.label :name %></p>
+  <p><%= form.text_field :name %></p>
+ <p><%= form.label :arena %></p>
+  <p><%= form.text_field :arena %></p>
+ <p><%= form.label :trail_access %></p>
+  <p><%= form.text_field :trail_access %></p>
+ <p><%= form.label :monthly_fee %></p>
+  <p><%= form.text_field :monthly_fee %></p>
+ <p><%= form.label :stalls %></p>
+  <p><%= form.text_field :stalls %></p>
+ <p><%= form.label :vacancy %></p>
+  <p><%= form.text_field :vacancy %></p>
+  
+  <br>
+  <%= form.submit 'Update Barn' %>
+<% end %>
+
