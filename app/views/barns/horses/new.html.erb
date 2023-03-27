@@ -1,0 +1,19 @@
+<%= form_with method: :post, local: true do |form| %>
+
+
+ <p><%= form.label :name %></p>
+  <p><%= form.text_field :name %></p>
+ <p><%= form.label :breed %></p>
+  <p><%= form.text_field :breed %></p>
+ <p><%= form.label :age %></p>
+  <p><%= form.text_field :age %></p>
+ <p><%= form.label :trail_user %></p>
+  <p><%= form.text_field :trail_user %></p>
+ <p><%= form.label :arena_user %></p>
+  <p><%= form.text_field :arena_user %></p>
+ <p><%= form.label :paid %></p>
+  <p><%= form.text_field :paid %></p>
+ 
+  <br>
+  <%= form.submit 'Create Horse' %>
+<% end %>

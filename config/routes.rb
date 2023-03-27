@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   post '/barns', to: 'barns#create'
   get '/barns/:id', to: 'barns#show'
   get '/horses/:id', to: 'horses#show'
-  get '/barns/:barn_id/horses', to: 'barns/horses#index'
-  get '/barns/:barn_id/edit', to: 'barns#edit'
-  patch '/barns/:barn_id', to: 'barns#update'
+  get '/barns/:id/horses', to: 'barns/horses#index'
+  get '/barns/:id/edit', to: 'barns#edit'
+  patch '/barns/:id', to: 'barns#update'
+  get '/barns/:id/horses/new', to: 'barns/horses#new'
+  post 'barns/:id/horses/new', to: 'barns/horses#create'
+  
 end

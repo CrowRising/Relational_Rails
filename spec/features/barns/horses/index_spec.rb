@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+
 RSpec.describe 'barns/:barn_id/horses', type: :feature do
   describe 'as a visitor when i visit the barns horses index page' do
     let!(:barn_1) { Barn.create!(name: 'Nix', location: 'Nix Lane', arena: true, trail_access: true, monthly_fee: 360, stalls: 24, vacancy: true) }
@@ -8,7 +9,7 @@ RSpec.describe 'barns/:barn_id/horses', type: :feature do
 
     let!(:horse_1) { barn_1.horses.create!(name: 'Clementine', breed: 'Tennessee Walker', age: 15, trail_user: true, arena_user: false, paid: true) }
     let!(:horse_2) { barn_1.horses.create!(name: 'Lefty', breed: 'Appedix Quarter Horse', age: 9, trail_user: true, arena_user: true, paid: true) }
-  
+  #User Story 5, Parent Children Index 
      it 'displays each horse and attributes associated with barn_1' do
       visit "/barns/#{barn_1.id}/horses"
 
