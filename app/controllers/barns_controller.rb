@@ -17,11 +17,11 @@ class BarnsController < ApplicationController
 
   def edit
     # require 'pry'; binding.pry
-    @barn = Barn.find(params[:barn_id])
+    @barn = Barn.find(params[:id])
   end
 
   def update
-    barn = Barn.find(params[:barn_id])
+    barn = Barn.find(params[:id])
     barn.update(barn_params)
     barn.save 
     redirect_to "/barns/#{barn.id}"

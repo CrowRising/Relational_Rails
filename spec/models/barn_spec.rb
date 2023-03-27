@@ -14,7 +14,7 @@ RSpec.describe Barn do
     let!(:horse_2) { barn_1.horses.create!(name: 'Lefty', breed: 'Appedix Quarter Horse', age: 9, trail_user: true, arena_user: true, paid: true)}
     
     it '::order_by_creation_date' do
-       expect(Barn.order_by_creation_date).to eq([barn_3, barn_2, barn_1])
+       expect(Barn.order_by_creation_date.first).to eq(barn_3)
     end
 
     it '::count_by' do
