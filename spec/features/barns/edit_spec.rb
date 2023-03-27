@@ -11,8 +11,9 @@
 # and I am redirected to the Barn's Show page where I see the barn's updated info
 
 require 'rails_helper'
+
 RSpec.describe '/barns/:id/edit' do
-  describe 'links to an edit page from barn index and redirects to form' do 
+  describe 'links to an edit page from barn show page and redirects to form' do 
     let!(:barn_1) { Barn.create!(name: 'Nix', location: 'Nix Lane', arena: true, trail_access: true, monthly_fee: 360, stalls: 24, vacancy: true) }
     let!(:barn_2) { Barn.create!(name: 'Arrowhead', location: 'West Alameda', arena: true, trail_access: false, monthly_fee: 475, stalls: 20, vacancy: false) }
     let!(:barn_3) { Barn.create!(name: 'Goosedowns', location: 'Airport Road', arena: true, trail_access: false, monthly_fee: 900, stalls: 40, vacancy: true) }
