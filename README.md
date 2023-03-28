@@ -1,26 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 <h1> Relational Rails <h1>
+<h4>Mod2 first Solo project
 
+<h2> One-to-Many <h2>
+<h6> using: <h6>
+* Ruby 2.7.4
 
-* Ruby version
+<h3> What it IS <h3>
+![Alt text](relational%20rails%20readme.jpeg)
 
-* System dependencies
+Using a schema designer I made the parent/child tables and created a database of barns/horses.
+A basic app where a user can see a list of barns, their attributes and the horses that board at said barn. The user can also see a list of horses and their attributes. The user has the ability to access and click links on all pages, some taking them from page to page and some takng them to editable forms for both barn and horse.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<h6>Built using:<h6>
+* active record
+* CRUD
+* usability
