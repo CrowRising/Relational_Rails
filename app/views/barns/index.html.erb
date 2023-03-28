@@ -3,7 +3,8 @@
 <% @barns.each do |barn| %>
 <h3> <p><%= barn.name %></p></h3>
 <p> created:<%= barn.created_at %></p>
-<%= link_to "Update #{barn.name}", "/barns/#{barn.id}/edit"%> <br><br>
+<%= link_to "Update #{barn.name}", "/barns/#{barn.id}/edit"%> <br>
+<%= button_to "Remove #{barn.name}", "/barns/#{barn.id}", method: :delete %>
  <% end %>
 <br>
 <br>
