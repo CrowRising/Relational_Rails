@@ -40,13 +40,21 @@ RSpec.describe '/barns/:id', type: :feature do
 
     let!(:horse_1) { barn_1.horses.create!(name: 'Clementine', breed: 'Tennessee Walker', age: 15, trail_user: true, arena_user: false, paid: true) }
     let!(:horse_2) { barn_1.horses.create!(name: 'Lefty', breed: 'Appedix Quarter Horse', age: 9, trail_user: true, arena_user: true, paid: true)}
-    
+    let!(:horse_3) { barn_2.horses.create!(name: 'Willow', breed: 'Fjord', age: 8, trail_user: true, arena_user: true, paid: true)}
     it 'displays a count of horses at barn' do
       visit "/barns/#{barn_1.id}"
 
       expect(page).to have_content("Number of Horses: #{barn_1.horses.size}")
+    end
 
+    #   User Story 19, Parent Delete
+    it 'displays a link to remove barn' do
+      visit "/barns/#{barn_3.id}"
+
+      click_button "Remove #{barn_3.name}"
+
+      expect(current_path).to eq("/barns")
+      expect(page).to_not have_content(barn_3.name)
     end
   end
- 
 end
