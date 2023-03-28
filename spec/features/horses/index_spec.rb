@@ -27,6 +27,14 @@ RSpec.describe '/horses', type: :feature do
       expect(page).to have_content("Paid: #{ horse_2.paid }")
   
     end
+  #User Story 18, Child Update From Childs Index Page 
+    it 'has a link to edit a horse' do
+      visit '/horses'
+
+      click_link "Update #{horse_2.name}"
+
+      expect(current_path).to eq("/horses/#{horse_2.id}/edit")
+    end
   end
   #User Story 15, Child Index only shows `true` Records 
   # As a visitor

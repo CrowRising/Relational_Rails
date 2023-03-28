@@ -7,5 +7,6 @@
   <p>Trail_user: <%= horse.trail_user %></p>
   <p>Arena_user: <%= horse.arena_user %></p>
   <p>Paid: <%= horse.paid %></p>
+  <%= link_to "Update #{horse.name}", "/horses/#{horse.id}/edit"%>
 <br>
   <% end %>
