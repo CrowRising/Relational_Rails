@@ -1,5 +1,5 @@
 <h2> All the Horses at <%="#{@barn.name}"%></h2>
-
+<%= link_to "Sort Alphabetical", "/barns/#{@barn.id}/horses?sort=order_alpha" %>
 <br>
 <% @horses.each do |horse| %>
 <h4><p>Name: <%= horse.name %></p></h4>

@@ -2,7 +2,7 @@ module Barns
   class HorsesController < ApplicationController
     def index
      @barn = Barn.find(params[:id])
-     @horses = @barn.horses
+     @horses = @barn.sort_by_name(params[:sort])
     end
 
     def new
