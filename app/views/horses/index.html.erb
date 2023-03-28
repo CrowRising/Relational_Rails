@@ -7,6 +7,9 @@
   <p>Trail_user: <%= horse.trail_user %></p>
   <p>Arena_user: <%= horse.arena_user %></p>
   <p>Paid: <%= horse.paid %></p>
+
+  <br>
+  <%= button_to "Remove #{horse.name}", "/horses/#{horse.id}", method: :delete %>
   <%= link_to "Update #{horse.name}", "/horses/#{horse.id}/edit"%>
 <br>
   <% end %>

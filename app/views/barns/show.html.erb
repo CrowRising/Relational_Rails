@@ -14,4 +14,5 @@
 
 <p>Number of Horses: <%=@barn.count_of_horses%></p>
 
+<%= button_to "Remove #{@barn.name}", "/barns/#{@barn.id}", method: :delete%>
 <h4><%= link_to "Horses at this Barn", "/barns/#{@barn.id}/horses" %></h4>

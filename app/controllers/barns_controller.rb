@@ -27,6 +27,13 @@ class BarnsController < ApplicationController
     redirect_to "/barns/#{barn.id}"
   end
 
+  def destroy
+    barn = Barn.find(params[:id])
+    barn.horses.destroy_all
+    barn.destroy
+    redirect_to '/barns'
+  end
+
   private 
   def barn_params
     params.permit(:name)

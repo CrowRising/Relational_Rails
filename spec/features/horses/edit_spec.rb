@@ -9,7 +9,7 @@
 # Then a `PATCH` request is sent to '/child_table_name/:id',
 # the child's data is updated,
 # and I am redirected to the Child Show page where I see the Child's updated information
-require 'rai/urlls_helper'
+require 'rails_helper'
 
 RSpec.describe '/horses/:id/edit' do
   describe 'links to an edit page from horse show page and redirects to form' do 

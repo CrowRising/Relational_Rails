@@ -19,5 +19,14 @@ RSpec.describe '/horses/:id', type: :feature do
       expect(page).to have_content(horse_1.arena_user)
       expect(page).to have_content(horse_1.paid)
     end
+
+    it 'displays a link to remove horse' do
+      visit "/horses/#{horse_2.id}"
+
+      click_button "Remove #{horse_2.name}"
+
+      expect(current_path).to eq("/horses")
+      expect(page).to_not have_content(horse_2.name)
+    end
   end
 end

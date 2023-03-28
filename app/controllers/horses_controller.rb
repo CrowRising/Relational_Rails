@@ -18,6 +18,12 @@ class HorsesController < ApplicationController
     redirect_to "/horses/#{@horse.id}"
   end
 
+  def destroy
+   horse = Horse.find(params[:id])
+   horse.destroy
+    redirect_to '/horses'
+  end
+
   private 
   def horse_params
     params.permit(:name, :breed, :age, :trail_user, :arena_user, :paid)
