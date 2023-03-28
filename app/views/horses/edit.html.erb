@@ -4,15 +4,15 @@
  <p><%= form.label :name %></p>
   <p><%= form.text_field :name, value: @horse.name %></p>
  <p><%= form.label :breed %></p>
-  <p><%= form.text_field :breed %></p>
+  <p><%= form.text_field :breed, value: @horse.breed %></p>
  <p><%= form.label :age %></p>
-  <p><%= form.text_field :age %></p>
+  <p><%= form.text_field :age, value: @horse.age %></p>
  <p><%= form.label :trail_user %></p>
-  <p><%= form.text_field :trail_user %></p>
+  <p><%= form.text_field :trail_user, value: @horse.trail_user %></p>
  <p><%= form.label :arena_user %></p>
-  <p><%= form.text_field :arena_user %></p>
+  <p><%= form.text_field :arena_user, value: @horse.arena_user %></p>
  <p><%= form.label :paid %></p>
-  <p><%= form.text_field :paid %></p>
+  <p><%= form.text_field :paid, value: @horse.paid %></p>
  
   <br>
   <%= form.submit 'Update Horse' %>

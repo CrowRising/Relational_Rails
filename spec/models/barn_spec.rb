@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Barn do
+RSpec.describe Barn, type: :model do
   describe 'relationships' do
     it { should have_many :horses }
   end

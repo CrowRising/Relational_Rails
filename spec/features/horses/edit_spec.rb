@@ -28,9 +28,9 @@ RSpec.describe '/horses/:id/edit' do
 
       fill_in 'trail_user', with: false
       click_button 'Update Horse'
-
+     
+     
       expect(current_path).to eq( "/horses/#{horse_2.id}")
-      save_and_open_page
       expect(page).to have_content(false)
     end
   end
