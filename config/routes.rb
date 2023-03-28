@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   delete '/barns/:id', to: 'barns#destroy'
   delete '/horses/:id', to: 'horses#destroy'
   delete 'barns', to: 'barns#destroy'
+  delete 'horses', to: 'horses#destroy'
 end

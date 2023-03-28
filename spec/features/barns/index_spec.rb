@@ -31,7 +31,7 @@ RSpec.describe '/barns', type: :feature do
     end
 
     #User Story 22 - Delete Barn from Barn Index Page
-    it 'has link to delete each parent' do
+    it 'has link to delete each barn' do
       visit '/barns'
 
       click_button "Remove #{barn_2.name}"

@@ -35,10 +35,17 @@ RSpec.describe '/horses', type: :feature do
 
       expect(current_path).to eq("/horses/#{horse_2.id}/edit")
     end
+
+    #User Story 23 - Delete Horse from Horse Index Page
+    it 'has link to delete each horse' do
+      visit '/horses'
+  
+      click_button "Remove #{horse_1.name}"
+  
+      expect(current_path).to eq("/horses")
+      expect(page).to_not have_content(horse_1.id)
+    end
   end
   #User Story 15, Child Index only shows `true` Records 
-  # As a visitor
-  # When I visit the child index
-  # Then I only see records where the boolean column is 
-  
+    #did not wrtie a test for this except in model spec
 end
