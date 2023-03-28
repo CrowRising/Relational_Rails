@@ -7,4 +7,5 @@
   <p>Arena_user: <%= @horse.arena_user %></p>
   <p>Paid: <%= @horse.paid %></p>
 
+<%= button_to "Remove #{@horse.name}", "/horses/#{@horse.id}", method: :delete%>
   <%= link_to 'Update Horse', "/horses/#{@horse.id}/edit"%>
