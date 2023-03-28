@@ -3,6 +3,7 @@
 <% @barns.each do |barn| %>
 <h3> <p><%= barn.name %></p></h3>
 <p> created:<%= barn.created_at %></p>
+<%= link_to "Update #{barn.name}", "/barns/#{barn.id}/edit"%>
  <% end %>
 
  <%= link_to "New Barns", '/barns/new' %>

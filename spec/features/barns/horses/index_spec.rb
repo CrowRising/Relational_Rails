@@ -27,6 +27,14 @@ RSpec.describe 'barns/:barn_id/horses', type: :feature do
       expect(page).to have_content(horse_2.paid)
     end
 
+     # User Story 16, Sort Parent's Children in Alphabetical Order by name 
+    # As a visitor
+    # When I visit the Parent's children Index Page
+    # Then I see a link to sort children in alphabetical order
+    # When I click on the link
+    # I'm taken back to the Parent's children Index Page where I see all of the parent's children in alphabetical order
+
+
     it 'displays a link to sort horses by alphabet' do
       visit "/barns/#{barn_1.id}/horses"
 
@@ -35,13 +43,5 @@ RSpec.describe 'barns/:barn_id/horses', type: :feature do
       expect(current_path).to eq("/barns/#{barn_1.id}/horses")
       expect(horse_1.name).to appear_before(horse_2.name)
     end
-  end
-  # User Story 16, Sort Parent's Children in Alphabetical Order by name 
-  # As a visitor
-  # When I visit the Parent's children Index Page
-  # Then I see a link to sort children in alphabetical order
-  # When I click on the link
-  # I'm taken back to the Parent's children Index Page where I see all of the parent's children in alphabetical order
-
-  
+  end 
 end

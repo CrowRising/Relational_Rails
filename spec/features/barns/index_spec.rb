@@ -20,5 +20,14 @@ RSpec.describe '/barns', type: :feature do
       expect(barn_2.name).to appear_before(barn_1.name)
       expect(page).to have_content(barn_1.created_at)
     end
+    #User Story 17 - Barn Update from Parent Index
+
+    it 'has a link to edit the barn' do
+      visit '/barns'
+
+      click_link "Update #{barn_3.name}"
+
+      expect(current_path).to eq("/barns/#{barn_3.id}/edit")
+    end
   end
 end
