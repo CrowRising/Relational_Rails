@@ -18,3 +18,4 @@ A basic app where a user can see a list of barns, their attributes and the horse
 * active record
 * CRUD
 * usability
+![gettyimages-143450641-612x612](https://user-images.githubusercontent.com/121584341/228379950-e89ca4ef-0e3f-440f-a103-a01f60315a70.jpg)
